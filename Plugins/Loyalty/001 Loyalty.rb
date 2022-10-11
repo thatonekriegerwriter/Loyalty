@@ -1447,8 +1447,6 @@ end
     gain=0 if gain.nil?
 	pkmn.loyalty = 100 if @loyalty.nil?
     bonus=0 if bonus.nil?
-	bonus=10 if pkmn.nature == :LOVING
-	bonus = bonus+rand(5)+5 if $player.playerclass == "Monk"
     @loyalty = (@loyalty + gain + base + bonus).clamp(0, 255)
   end
   

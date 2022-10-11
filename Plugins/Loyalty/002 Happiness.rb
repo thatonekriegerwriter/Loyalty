@@ -1,7 +1,7 @@
 class Pokemon
   def changeHappiness(method)
+    pkmn = self
   if LoyaltyConfig::NATURE_BASED_HAPPINESS == false
-  
     gain = 0
     happiness_range = @happiness / 100
     case method
@@ -45,7 +45,6 @@ class Pokemon
 	pkmn.changeLoyalty(method)
 	end
   elsif LoyaltyConfig::NATURE_BASED_HAPPINESS == true
-    pkmn = self
     gain = 0
 	base = 0
      base = 100 if pkmn.nature ==   :LOVING
